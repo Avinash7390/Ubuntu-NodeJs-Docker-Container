@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  firebase-container:
+    image: you-image-from-docker-hub # hub.docker.com
+    ports:
+      - "5432:5432"
+    environment:
+      apiKey: jddhjshdhsgdywuqwhiqwehwqehhqd,
+      authDomain: event-management-df7b7.firebaseapp.com
+      projectId: event-management-df7b7
+      storageBucket: event-management-df7b7.appspot.com
+      messagingSenderId: 105053156995
+      appId: 1:105053156995:web:5098bff097b126e2bdcdb6
+
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+
+# to run all services or containers use command : docker compose up
+
